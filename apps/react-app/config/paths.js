@@ -70,6 +70,4 @@ module.exports = {
   publicUrlOrPath,
 };
 
-
-
 module.exports.moduleFileExtensions = moduleFileExtensions;
