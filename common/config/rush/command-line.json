@@ -176,6 +176,16 @@
 
       // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged"
+    },
+    {
+      "name": "lint-staged",
+      "commandKind": "bulk",
+      "summary": "Run lint-staged on each package",
+      "description": "Iterates through each package in the monorepo and runs the 'lint-staged' script",
+      "enableParallelism": false,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true,
+      "allowWarningsInSuccessfulBuild": true
     }
   ],
 

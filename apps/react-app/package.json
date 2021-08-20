@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "react-scripts lint src/**/*.{ts,tsx}"
+    "lint": "react-scripts lint src/**/*.{ts,tsx}",
+    "lint-staged": "react-scripts lint-staged"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
