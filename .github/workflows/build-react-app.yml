@@ -1,4 +1,4 @@
-name: Blog Production Deployment
+name: React App Production Deployment
 on:
   workflow_dispatch:
     inputs:
