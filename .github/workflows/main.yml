@@ -1,0 +1,121 @@
+# Name of workflow
+name: Main workflow
+
+# When workflow is triggered
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+# Jobs to carry out
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v1
+      # Install NodeJS
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      # Run rush install and build on our code
+      - name: Install dependencies
+        run: |
+          node common/scripts/install-run-rush.js change -v
+          node common/scripts/install-run-rush.js install
+          node common/scripts/install-run-rush.js build
+      # Run eslint to check all packages
+      - name: Lint packages
+        run: node common/scripts/install-run-rush.js lint
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    env:
+      CI: true
+    steps:
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v1
+      # Install NodeJS
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      # Run rush install
+      - name: Install dependencies
+        run: |
+          node common/scripts/install-run-rush.js change -v
+          node common/scripts/install-run-rush.js install
+          node common/scripts/install-run-rush.js build
+      # Run unit tests for all packages
+      - name: Run tests
+        run: node common/scripts/install-run-rush.js test
+  deploy:
+    # Operating system to run job on
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+        app-name: [react-app]
+        include:
+          - app-name: react-app
+            app: '@monorepo/react-app'
+            app-dir: 'apps/react-app'
+            site-id: NETLIFY_SITE_ID
+    needs: [lint, test]
+    # Steps in job
+    steps:
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v1
+      # Install NodeJS
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      # Run rush install and build on our code
+      - name: Install dependencies
+        run: |
+          node common/scripts/install-run-rush.js change -v
+          node common/scripts/install-run-rush.js install
+      - name: Build ${{ matrix.app-name }} app
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets[matrix.site-id] }}
+        id: netlify
+        working-directory: ${{ matrix.app-dir }}
+        run: |
+          node $GITHUB_WORKSPACE/common/scripts/install-run-rush.js build --verbose --to-except ${{ matrix.app }}
+
+          npx netlify-cli build
+
+          PROD_FLAG="${{ github.event_name == 'pull_request' && '' || '--prod' }}"
+          OUTPUT="$(npx netlify-cli deploy $PROD_FLAG)"
+
+          NETLIFY_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*(--)[a-zA-Z0-9./?=_-]*')
+          NETLIFY_LIVE_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*' | grep -Ev 'netlify.app|netlify.com')
+
+          if [[  "${{ github.event_name }}" == "pull_request"  ]]; then
+            echo "::set-output name=NETLIFY_URL::$NETLIFY_URL"
+          else
+            echo "::set-output name=NETLIFY_URL::$NETLIFY_LIVE_URL"
+          fi
+
+      - name: Publish preview urls
+        id: preview_urls
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          msg: '🚀 Deployed on ${{ steps.netlify.outputs.netlify_url }}'
+          check_for_duplicate_msg: 'true'
