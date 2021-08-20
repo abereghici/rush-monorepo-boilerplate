@@ -457,6 +457,11 @@
       "packageName": "@monorepo/react-scripts",
       "projectFolder": "packages/react-scripts",
       "reviewCategory": "tools"
+    },
+    {
+      "packageName": "@monorepo/eslint-config",
+      "projectFolder": "packages/eslint-config",
+      "reviewCategory": "tools"
     }
   ]
 }

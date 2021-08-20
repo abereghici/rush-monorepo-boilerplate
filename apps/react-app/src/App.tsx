@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(): React.ReactNode {
   return (
     <div className="App">
       <header className="App-header">
