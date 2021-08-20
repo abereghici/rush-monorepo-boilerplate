@@ -94,9 +94,7 @@ jobs:
         id: netlify
         working-directory: ${{ matrix.app-dir }}
         run: |
-          node $GITHUB_WORKSPACE/common/scripts/install-run-rush.js build --verbose --to-except ${{ matrix.app }}
-
-          npx netlify-cli build
+          node $GITHUB_WORKSPACE/common/scripts/install-run-rush.js build --verbose --to ${{ matrix.app }}
 
           PROD_FLAG="${{ github.event_name == 'pull_request' && '' || '--prod' }}"
           OUTPUT="$(npx netlify-cli deploy $PROD_FLAG)"

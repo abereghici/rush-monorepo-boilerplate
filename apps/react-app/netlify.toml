@@ -1,5 +1,5 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = "build"
 [functions]
   node_bundler = "esbuild"
