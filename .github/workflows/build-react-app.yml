@@ -1,30 +1,33 @@
-# Name of workflow
-name: Main workflow
-
-# When workflow is triggered
+name: Blog Production Deployment
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Bump Version
+        default: v1.0.0
+        required: true
+      git-ref:
+        description: Git Ref (Optional)
+        required: false
 # Jobs to carry out
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
     steps:
       # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v1
+      - name: Clone Repository (Latest)
+        uses: actions/checkout@v2
+        if: github.event.inputs.git-ref == ''
+      - name: Clone Repository (Custom Ref)
+        uses: actions/checkout@v2
+        if: github.event.inputs.git-ref != ''
+        with:
+          ref: ${{ github.event.inputs.git-ref }}
       # Install NodeJS
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.x
       # Run rush install and build on our code
       - name: Install dependencies
         run: |
@@ -36,20 +39,23 @@ jobs:
         run: node common/scripts/install-run-rush.js lint
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
     env:
       CI: true
     steps:
       # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v1
+      - name: Clone Repository (Latest)
+        uses: actions/checkout@v2
+        if: github.event.inputs.git-ref == ''
+      - name: Clone Repository (Custom Ref)
+        uses: actions/checkout@v2
+        if: github.event.inputs.git-ref != ''
+        with:
+          ref: ${{ github.event.inputs.git-ref }}
       # Install NodeJS
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.x
       # Run rush install
       - name: Install dependencies
         run: |
@@ -62,45 +68,47 @@ jobs:
   deploy:
     # Operating system to run job on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-        app-name: [react-app]
-        include:
-          - app-name: react-app
-            app: '@monorepo/react-app'
-            app-dir: 'apps/react-app'
-            app-build: 'apps/react-app/build'
-            site-id: NETLIFY_SITE_ID
     needs: [lint, test]
     # Steps in job
     steps:
       # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v1
+      - name: Clone Repository (Latest)
+        uses: actions/checkout@v2
+        if: github.event.inputs.git-ref == ''
+      - name: Clone Repository (Custom Ref)
+        uses: actions/checkout@v2
+        if: github.event.inputs.git-ref != ''
+        with:
+          ref: ${{ github.event.inputs.git-ref }}
       # Install NodeJS
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.x
       # Run rush install and build on our code
       - name: Install dependencies
         run: |
           node common/scripts/install-run-rush.js change -v
           node common/scripts/install-run-rush.js install
-      - name: Build ${{ matrix.app-name }}
-        working-directory: ${{ matrix.app-dir }}
+      # Build app
+      - name: Build react app
+        working-directory: apps/react-app
         run: |
-          node $GITHUB_WORKSPACE/common/scripts/install-run-rush.js build --verbose --to ${{ matrix.app }}
-      - name: Deploy ${{ matrix.app-name }}
+          node  $GITHUB_WORKSPACE/common/scripts/install-run-rush.js build --verbose --to @monorepo/react-app
+      - name: Deploy react app
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: ${{ matrix.app-build }}
-          production-deploy: ${{ github.event_name != 'pull_request' }}
+          publish-dir: apps/react-app/build
+          production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets[matrix.site-id] }}
+          NETLIFY_SITE_ID: ${{ secrets.PRODUCTION_NETLIFY_SITE_ID }}
+      # Create release tag
+      - name: Create tag
+        run: |
+          git tag ${{ github.event.inputs.version }}
+          git push origin --tags
