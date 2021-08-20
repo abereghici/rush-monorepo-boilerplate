@@ -70,6 +70,7 @@ jobs:
           - app-name: react-app
             app: '@monorepo/react-app'
             app-dir: 'apps/react-app'
+            app-build: 'apps/react-app/build'
             site-id: NETLIFY_SITE_ID
     needs: [lint, test]
     # Steps in job
@@ -87,33 +88,18 @@ jobs:
         run: |
           node common/scripts/install-run-rush.js change -v
           node common/scripts/install-run-rush.js install
-      - name: Build ${{ matrix.app-name }} app
+
+      - name: Deploy ${{ matrix.app-name }}
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: ${{ matrix.app-build }}
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: '🚀 Deployed from GitHub Actions'
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets[matrix.site-id] }}
-        id: netlify
-        working-directory: ${{ matrix.app-dir }}
-        run: |
-          node $GITHUB_WORKSPACE/common/scripts/install-run-rush.js build --verbose --to ${{ matrix.app }}
-
-          PROD_FLAG="${{ github.event_name == 'pull_request' && '' || '--prod' }}"
-          OUTPUT="$(npx netlify-cli deploy $PROD_FLAG)"
-
-          NETLIFY_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*(--)[a-zA-Z0-9./?=_-]*')
-          NETLIFY_LIVE_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*' | grep -Ev 'netlify.app|netlify.com')
-
-          if [[  "${{ github.event_name }}" == "pull_request"  ]]; then
-            echo "::set-output name=NETLIFY_URL::$NETLIFY_URL"
-          else
-            echo "::set-output name=NETLIFY_URL::$NETLIFY_LIVE_URL"
-          fi
-
-      - name: Publish preview urls
-        id: preview_urls
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          msg: '🚀 Deployed on ${{ steps.netlify.outputs.netlify_url }}'
-          check_for_duplicate_msg: 'true'
+        timeout-minutes: 1
