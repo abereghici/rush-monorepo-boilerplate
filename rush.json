@@ -452,6 +452,11 @@
       "packageName": "@monorepo/react-app",
       "projectFolder": "apps/react-app",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@monorepo/react-scripts",
+      "projectFolder": "packages/react-scripts",
+      "reviewCategory": "tools"
     }
   ]
 }
