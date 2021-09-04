@@ -1,0 +1,29 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "rush-commitlint",
+      "version": "1.0.0",
+      "private": true,
+      "dependencies": {
+        "@commitlint/cli": "9.1.2",
+        "@commitlint/config-conventional": "8.0.0"
+      }
+    },
+    "prefix": "/home/abereghici/Development/rush-monorepo-boilerplate/common/autoinstallers/rush-commitlint"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/abereghici/.pnpm-store/v3",
+    "virtualStoreDir": "/home/abereghici/Development/rush-monorepo-boilerplate/common/autoinstallers/rush-commitlint/node_modules/.pnpm"
+  },
+  "3 error pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "Headless installation requires a pnpm-lock.yaml file",
+      "stack": "Error: Headless installation requires a pnpm-lock.yaml file\n    at _install (/home/abereghici/.rush/node-v14.15.3/pnpm-6.3.0/node_modules/pnpm/dist/pnpm.cjs:108895:19)\n    at mutateModules (/home/abereghici/.rush/node-v14.15.3/pnpm-6.3.0/node_modules/pnpm/dist/pnpm.cjs:108874:26)\n    at async Object.install (/home/abereghici/.rush/node-v14.15.3/pnpm-6.3.0/node_modules/pnpm/dist/pnpm.cjs:108831:22)\n    at async Object.handler [as default] (/home/abereghici/.rush/node-v14.15.3/pnpm-6.3.0/node_modules/pnpm/dist/pnpm.cjs:111781:29)\n    at async Timeout._onTimeout (/home/abereghici/.rush/node-v14.15.3/pnpm-6.3.0/node_modules/pnpm/dist/pnpm.cjs:121003:22)"
+    }
+  }
+}
