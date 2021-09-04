@@ -1,3 +1,23 @@
-Invoking: react-scripts lint-staged 
+Config file "/home/abereghici/Development/rush-monorepo-boilerplate/packages/eslint-config/config/rush-project.json" does not exist. Attempting to load via rig.
 
-ℹ No staged files match any configured task.
+No rig found for "/home/abereghici/Development/rush-monorepo-boilerplate/packages/eslint-config"
+
+Config file "/home/abereghici/Development/rush-monorepo-boilerplate/apps/react-app/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/home/abereghici/Development/rush-monorepo-boilerplate/apps/react-app"
+
+Config file "/home/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/home/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts"
+
+Invoking: react-scripts test 
+
+PASS src/App.test.tsx
+  ✓ renders learn react link (30 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.764 s, estimated 2 s
+Ran all test suites related to changed files.
+

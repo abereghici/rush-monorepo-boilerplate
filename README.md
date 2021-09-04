@@ -1,5 +1,9 @@
 # rush-monorepo-boilerplate
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5e8a514e-76a0-4f3a-b442-a1d189a8f0ed/deploy-status)](https://app.netlify.com/sites/rush-monorepo-boilerplate/deploys)
+
+[rush-monorepo-boilerplate.netlify.app](rush-monorepo-boilerplate.netlify.app)
+
 ### Rush monorepo boilerplate
 
 - RushJS with PNPM to manage monorepo
@@ -7,7 +11,7 @@
 - React Scripts package: build tools created on top of create-react-app. Contains build start, test, lint, lint-staged scripts
 - CI/CD using Github Actions
 - Formatting using Prettier
-- Git hooks: pre-commit ( linting, formatting, etc. ), commit-msg ( linting commit message using commitlint )
+- Git hooks: pre-commit ( prettier, lint-staged ), commit-msg ( lint commits using commitlint )
 
 ## Prerequisites
 

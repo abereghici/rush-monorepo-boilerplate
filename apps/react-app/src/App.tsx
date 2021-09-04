@@ -12,7 +12,7 @@ function App(): React.ReactElement {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          React App living in a Rush monorepo
         </a>
       </header>
     </div>
