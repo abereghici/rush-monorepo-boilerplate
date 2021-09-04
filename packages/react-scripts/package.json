@@ -6,7 +6,8 @@
     "config",
     "lib",
     "scripts",
-    "utils"
+    "utils",
+    "shared-tsconfig.json"
   ],
   "bin": {
     "react-scripts": "./bin/react-scripts.js"

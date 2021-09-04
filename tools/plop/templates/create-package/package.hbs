@@ -1,0 +1,10 @@
+{ "name": "@monorepo/{{package-name}}", "version": "1.0.0", "description": "{{sentenceCase
+  package-description
+}}", "scripts": { "build": "", "test": "react-scripts test", "lint":
+"react-scripts lint src/**/*.{ts,tsx}", "lint-staged": "react-scripts
+lint-staged" }, "main": "", "module": "", "types": "", "dependencies": {},
+"devDependencies": { "@monorepo/react-scripts": "1.0.0",
+"@monorepo/eslint-config": "1.0.0", "typescript": "^4.3.2" },
+"peerDependencies": { "typescript": "^4.3.2" }, "lint-staged": {
+"src/**/*.{ts,tsx}": [ "react-scripts lint --fix --", "react-scripts test
+--findRelatedTests --watchAll=false --silent" ] } }

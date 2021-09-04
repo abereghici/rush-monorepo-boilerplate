@@ -1,0 +1,310 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@babel/core",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "@babel/eslint-parser",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "@babel/eslint-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "@babel/preset-react",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "@monorepo/eslint-config",
+      "allowedCategories": ["apps", "packages"]
+    },
+    {
+      "name": "@monorepo/react-scripts",
+      "allowedCategories": ["apps", "packages"]
+    },
+    {
+      "name": "@pmmmwh/react-refresh-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "@svgr/webpack",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "@testing-library/jest-dom",
+      "allowedCategories": ["apps", "tools"]
+    },
+    {
+      "name": "@testing-library/react",
+      "allowedCategories": ["apps", "tools"]
+    },
+    {
+      "name": "@testing-library/user-event",
+      "allowedCategories": ["apps", "tools"]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "babel-eslint",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "babel-jest",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "babel-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "babel-plugin-named-asset-import",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "babel-preset-react-app",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "bfj",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "camelcase",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "case-sensitive-paths-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "css-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "dotenv",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "dotenv-expand",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-config-airbnb",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-config-react-app",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-flowtype",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-import",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-jest",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-jsx-a11y",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-react",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-react-hooks",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "eslint-plugin-testing-library",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "file-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "fs-extra",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "html-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "identity-obj-proxy",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "jest",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "jest-circus",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "jest-resolve",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "jest-watch-typeahead",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "lint-staged",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "mini-css-extract-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "optimize-css-assets-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "pnp-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "postcss-flexbugs-fixes",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "postcss-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "postcss-normalize",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "postcss-preset-env",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "postcss-safe-parser",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "prompts",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "react",
+      "allowedCategories": ["apps", "tools"]
+    },
+    {
+      "name": "react-app-polyfill",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "react-dev-utils",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "react-dom",
+      "allowedCategories": ["apps", "tools"]
+    },
+    {
+      "name": "react-refresh",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "read-pkg-up",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "resolve",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "resolve-url-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "sass-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "semver",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "style-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "terser-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "ts-pnp",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": ["apps", "packages", "tools"]
+    },
+    {
+      "name": "url-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "web-vitals",
+      "allowedCategories": ["apps", "tools"]
+    },
+    {
+      "name": "webpack",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "webpack-dev-server",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "webpack-manifest-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "which",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "workbox-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "yargs-parser",
+      "allowedCategories": ["tools"]
+    }
+  ]
+}

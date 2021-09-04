@@ -1,0 +1,8 @@
+{
+  "name": "rush-plop",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "plop": "^2.7.4"
+  }
+}

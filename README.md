@@ -12,6 +12,7 @@
 - CI/CD using Github Actions
 - Formatting using Prettier
 - Git hooks: pre-commit ( prettier, lint-staged ), commit-msg ( lint commits using commitlint )
+- Generate packages using plop
 
 ## Prerequisites
 

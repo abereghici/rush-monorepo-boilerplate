@@ -40,5 +40,6 @@
   "editor.codeActionsOnSave": {
     "editor.action.fixAll": true,
     "source.fixAll.eslint": true
-  }
+  },
+  "[handlebars]": { "editor.formatOnSave": false }
 }

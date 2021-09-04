@@ -1,0 +1,29 @@
+{
+  "files": {
+    "apps/react-app/.eslintrc.js": "c1fcb4d18c7ccac0966a2bd02ea3294727da03e5",
+    "apps/react-app/.gitignore": "4d29575de80483b005c29bfcac5061cd2f45313e",
+    "apps/react-app/.rush/temp/shrinkwrap-deps.json": "d0d87a633aecb6b187fa2b45ccb3e9f30f92c8c9",
+    "apps/react-app/README.md": "b87cb00449efa5b6131f56b7e45cc63eddf37373",
+    "apps/react-app/package.json": "62ca8c0a876f57c44476986793ad703495d60b56",
+    "apps/react-app/public/favicon.ico": "a11777cc471a4344702741ab1c8a588998b1311a",
+    "apps/react-app/public/index.html": "aa069f27cbd9d53394428171c3989fd03db73c76",
+    "apps/react-app/public/logo192.png": "fc44b0a3796c0e0a64c3d858ca038bd4570465d9",
+    "apps/react-app/public/logo512.png": "a4e47a6545bc15971f8f63fba70e4013df88a664",
+    "apps/react-app/public/manifest.json": "080d6c77ac21bb2ef88a6992b2b73ad93daaca92",
+    "apps/react-app/public/robots.txt": "e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e",
+    "apps/react-app/react-app.build.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "apps/react-app/src/App.css": "74b5e053450a48a6bdb4d71aad648e7af821975c",
+    "apps/react-app/src/App.test.tsx": "d37b412bd86e746a22af69e9210c08fd827aaa33",
+    "apps/react-app/src/App.tsx": "388ecec6502b2199594f3dce73e7db8da881f52d",
+    "apps/react-app/src/index.css": "ec2585e8c0bb8188184ed1e0703c4c8f2a8419b0",
+    "apps/react-app/src/index.tsx": "ef2edf8ea3fc42258464231e29140c8723458c1e",
+    "apps/react-app/src/logo.svg": "9dfc1c058cebbef8b891c5062be6f31033d7d186",
+    "apps/react-app/src/react-app-env.d.ts": "8aea09ff121896d8737bf13263b8bacf9b812ed1",
+    "apps/react-app/src/reportWebVitals.ts": "eb4be08f20670d09314d024aeb1616fc34a90d53",
+    "apps/react-app/src/setupTests.ts": "8f2609b7b3e0e3897ab3bcaad13caf6876e48699",
+    "apps/react-app/tsconfig.json": "9d379a3c4af84ae50928aaef7dd3a3d9cadeacde",
+    "apps/react-app/.rush/temp/package-deps_lint-staged.json": "bb9393f3a5437508ab548a5a9b55c3b1ea96a782",
+    "apps/react-app/.rush/temp/package-deps_lint.json": "d8bf2ecbf9ab28f12721f184e5f06d73d80fbb9f"
+  },
+  "arguments": "react-scripts lint src/**/*.{ts,tsx} "
+}
