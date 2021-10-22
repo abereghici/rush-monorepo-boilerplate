@@ -1,7 +1,7 @@
 {
   "files": {
     "packages/eslint-config/.rush/temp/package-deps_build.json": "fe9654b255170f0742a7e918eaab1c162e32591d",
-    "packages/eslint-config/.rush/temp/package-deps_lint-staged.json": "05ca6642c2dcc4fa8e9c4dbf0b2f2610ee21bd20",
+    "packages/eslint-config/.rush/temp/package-deps_lint-staged.json": "de1a70f145c41eeda906a79f3153672c2863ddd2",
     "packages/eslint-config/.rush/temp/package-deps_lint.json": "6ac406108696b1602b39ce80c0f869ccb4e53f26",
     "packages/eslint-config/.rush/temp/package-deps_test.json": "495d552813df5bd5c32ee95b44b292ced268493f",
     "packages/eslint-config/.rush/temp/shrinkwrap-deps.json": "610b2471ad6ab38a27c345948ba4f7d5d0522048",

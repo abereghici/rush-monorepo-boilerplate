@@ -3,7 +3,7 @@
     "apps/react-app/.eslintrc.js": "c1fcb4d18c7ccac0966a2bd02ea3294727da03e5",
     "apps/react-app/.gitignore": "4d29575de80483b005c29bfcac5061cd2f45313e",
     "apps/react-app/.rush/temp/package-deps_build.json": "8bb4e4e1db11d5980d75dee58cbf23f9893eaf66",
-    "apps/react-app/.rush/temp/package-deps_lint-staged.json": "49562c751e2fe633ef34bc2bab4f5fc8bc04961d",
+    "apps/react-app/.rush/temp/package-deps_lint-staged.json": "5312f0b1ea3792662e87038e78376d3ed323e41d",
     "apps/react-app/.rush/temp/package-deps_lint.json": "5cc007ddb363b1672aa9860ea83384f1f7e16c00",
     "apps/react-app/.rush/temp/shrinkwrap-deps.json": "2fcf2386aed5b0b77ed34a4e15b40ca0ffb71a2a",
     "apps/react-app/README.md": "b87cb00449efa5b6131f56b7e45cc63eddf37373",
