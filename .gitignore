@@ -85,4 +85,4 @@ common/autoinstallers/\*/.npmrc
 .history
 
 \*.build.log
-.rush/temp/
+**/.rush/temp/

@@ -2,11 +2,11 @@ Config file "/Users/abereghici/Development/rush-monorepo-boilerplate/packages/es
 
 No rig found for "/Users/abereghici/Development/rush-monorepo-boilerplate/packages/eslint-config"
 
-Config file "/Users/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
-
-No rig found for "/Users/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts"
-
 Config file "/Users/abereghici/Development/rush-monorepo-boilerplate/apps/react-app/config/rush-project.json" does not exist. Attempting to load via rig.
 
 No rig found for "/Users/abereghici/Development/rush-monorepo-boilerplate/apps/react-app"
+
+Config file "/Users/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
+
+No rig found for "/Users/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts"
 
