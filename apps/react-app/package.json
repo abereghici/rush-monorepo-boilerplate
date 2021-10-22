@@ -14,12 +14,14 @@
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2",
     "@monorepo/react-scripts": "1.0.0",
-    "@monorepo/eslint-config": "1.0.0"
+    "@monorepo/eslint-config": "1.0.0",
+    "@types/testing-library__jest-dom": "~5.14.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test:watch": "react-scripts test --watchAll=false",
+    "test": "react-scripts test --watchAll=false",
     "lint": "react-scripts lint src/**/*.{ts,tsx}",
     "lint-staged": "react-scripts lint-staged"
   },

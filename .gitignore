@@ -82,5 +82,7 @@ common/deploy/
 common/temp/
 common/autoinstallers/\*/.npmrc
 \*\*/.rush/temp/
-
 .history
+
+**/*.build.log
+**/.rush/temp/
