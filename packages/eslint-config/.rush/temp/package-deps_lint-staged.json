@@ -1,6 +1,7 @@
 {
   "files": {
-    "packages/eslint-config/.rush/temp/package-deps_lint-staged.json": "b5c4aab4a38b0b4f2bbbeb9b47fa01742588e42a",
+    "packages/eslint-config/.rush/temp/package-deps_build.json": "fe9654b255170f0742a7e918eaab1c162e32591d",
+    "packages/eslint-config/.rush/temp/package-deps_lint-staged.json": "05ca6642c2dcc4fa8e9c4dbf0b2f2610ee21bd20",
     "packages/eslint-config/.rush/temp/package-deps_lint.json": "6ac406108696b1602b39ce80c0f869ccb4e53f26",
     "packages/eslint-config/.rush/temp/package-deps_test.json": "495d552813df5bd5c32ee95b44b292ced268493f",
     "packages/eslint-config/.rush/temp/shrinkwrap-deps.json": "610b2471ad6ab38a27c345948ba4f7d5d0522048",
@@ -9,8 +10,7 @@
     "packages/eslint-config/eslint-config.build.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
     "packages/eslint-config/index.js": "97f37769225e8b831eb192eedecfaa8bbd412efc",
     "packages/eslint-config/package.json": "3b9403a3cc88c0175096dec1e92476a130bd002a",
-    "packages/eslint-config/react.js": "1a6e8670fddc64d07063f6f5c72e6587eb1a4418",
-    "packages/eslint-config/.rush/temp/package-deps_build.json": "fe9654b255170f0742a7e918eaab1c162e32591d"
+    "packages/eslint-config/react.js": "1a6e8670fddc64d07063f6f5c72e6587eb1a4418"
   },
   "arguments": ""
 }
