@@ -1,24 +1,3 @@
-Invoking: react-scripts build 
+Invoking: react-scripts lint-staged 
 
-Creating an optimized production build...
-Compiled successfully.
-
-File sizes after gzip:
-
-  42.68 KB  build/static/js/main.eff72807.js
-  1.64 KB   build/static/js/749.20030187.chunk.js
-  531 B     build/static/css/main.0923f4b6.css
-
-The project was built assuming it is hosted at /.
-You can control this with the homepage field in your package.json.
-
-The build folder is ready to be deployed.
-You may serve it with a static server:
-
-  npm install -g serve
-  serve -s build
-
-Find out more about deployment here:
-
-  https://cra.link/deployment
-
+ℹ No staged files match any configured task.

@@ -1,7 +1,7 @@
 {
-  "node": "14.15.3",
+  "node": "14.15.4",
   "packageManager": "pnpm",
-  "packageManagerVersion": "6.3.0",
+  "packageManagerVersion": "6.16.1",
   "packageJson": {
     "name": "rush-prettier",
     "version": "1.0.0",
