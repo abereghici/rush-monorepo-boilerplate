@@ -79,6 +79,10 @@
       "allowedCategories": ["tools"]
     },
     {
+      "name": "browserslist",
+      "allowedCategories": ["tools"]
+    },
+    {
       "name": "camelcase",
       "allowedCategories": ["tools"]
     },
@@ -88,6 +92,10 @@
     },
     {
       "name": "css-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "css-minimizer-webpack-plugin",
       "allowedCategories": ["tools"]
     },
     {
@@ -147,7 +155,15 @@
       "allowedCategories": ["tools"]
     },
     {
+      "name": "eslint-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
       "name": "file-loader",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "fork-ts-checker-webpack-plugin",
       "allowedCategories": ["tools"]
     },
     {
@@ -192,6 +208,10 @@
     },
     {
       "name": "pnp-webpack-plugin",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "postcss",
       "allowedCategories": ["tools"]
     },
     {
@@ -256,6 +276,10 @@
     },
     {
       "name": "semver",
+      "allowedCategories": ["tools"]
+    },
+    {
+      "name": "source-map-loader",
       "allowedCategories": ["tools"]
     },
     {

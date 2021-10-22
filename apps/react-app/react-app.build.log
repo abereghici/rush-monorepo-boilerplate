@@ -1,18 +1,24 @@
-Config file "/home/abereghici/Development/rush-monorepo-boilerplate/packages/eslint-config/config/rush-project.json" does not exist. Attempting to load via rig.
+Invoking: react-scripts build 
 
-No rig found for "/home/abereghici/Development/rush-monorepo-boilerplate/packages/eslint-config"
+Creating an optimized production build...
+Compiled successfully.
 
-Config file "/home/abereghici/Development/rush-monorepo-boilerplate/packages/input/config/rush-project.json" does not exist. Attempting to load via rig.
+File sizes after gzip:
 
-No rig found for "/home/abereghici/Development/rush-monorepo-boilerplate/packages/input"
+  42.68 KB  build/static/js/main.eff72807.js
+  1.64 KB   build/static/js/749.20030187.chunk.js
+  531 B     build/static/css/main.0923f4b6.css
 
-Config file "/home/abereghici/Development/rush-monorepo-boilerplate/apps/react-app/config/rush-project.json" does not exist. Attempting to load via rig.
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
 
-No rig found for "/home/abereghici/Development/rush-monorepo-boilerplate/apps/react-app"
+The build folder is ready to be deployed.
+You may serve it with a static server:
 
-Config file "/home/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts/config/rush-project.json" does not exist. Attempting to load via rig.
+  npm install -g serve
+  serve -s build
 
-No rig found for "/home/abereghici/Development/rush-monorepo-boilerplate/packages/react-scripts"
+Find out more about deployment here:
 
-Invoking: react-scripts lint src/**/*.{ts,tsx} 
+  https://cra.link/deployment
 

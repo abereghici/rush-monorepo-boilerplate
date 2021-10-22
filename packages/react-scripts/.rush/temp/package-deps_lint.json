@@ -1,21 +1,22 @@
 {
   "files": {
     "packages/react-scripts/.rush/temp/package-deps_lint-staged.json": "40e0d8d06a1a0f4348ea73ae5744a2f31ecb75d0",
-    "packages/react-scripts/.rush/temp/package-deps_test.json": "98ffd38a4770dfc8633a4366f86734cb640ec279",
-    "packages/react-scripts/.rush/temp/shrinkwrap-deps.json": "72f119e8b3819beb88b2ee93aabb5b4ae2481c38",
+    "packages/react-scripts/.rush/temp/package-deps_lint.json": "690de8c34ae1be68022e240195307695bf855efa",
+    "packages/react-scripts/.rush/temp/package-deps_test.json": "b0bb0cbdc364fe628dbcbd7b65803bf069a11e99",
+    "packages/react-scripts/.rush/temp/shrinkwrap-deps.json": "5a03aa3e8cc6764137622ea548cf4cbb3f762564",
     "packages/react-scripts/bin/react-scripts.js": "ca7749089771c69d93d437f294212f88512a9e4b",
     "packages/react-scripts/config/env.js": "3d1411bd0bda80dba685fd845eb5cb30af5f3a6a",
     "packages/react-scripts/config/getHttpsConfig.js": "013d493c1bbea605c0e7c12ed21680200e4b7191",
-    "packages/react-scripts/config/jest/babelTransform.js": "dabf5a8cb7e25c03bb607dc5487001f5dde147ce",
-    "packages/react-scripts/config/jest/cssTransform.js": "8f65114812a4e5726d2e4148cd15481c33e1cfec",
-    "packages/react-scripts/config/jest/fileTransform.js": "aab67618c38b46485f28d18bd81f7125383037ed",
+    "packages/react-scripts/config/jest/babelTransform.js": "819473c8df3447361bc536511fec721737c71315",
+    "packages/react-scripts/config/jest/cssTransform.js": "240c636445ac96b5f25df5fba7761087a9f9788c",
+    "packages/react-scripts/config/jest/fileTransform.js": "b301c88ffd1c8b79cfc463b5fd6ec048e335202f",
     "packages/react-scripts/config/modules.js": "d63e41d78dc7ea99156cec7d7c64ca6904c6f15c",
     "packages/react-scripts/config/paths.js": "df2837e0c03394fa1862f154eb824178ecc879d8",
     "packages/react-scripts/config/pnpTs.js": "d1b0539f80083580d03663342e619e13587ca01d",
-    "packages/react-scripts/config/webpack.config.js": "e61a5cb8d99efc325fea3866831f65072b74d60f",
-    "packages/react-scripts/config/webpackDevServer.config.js": "6c43a8a1064d7964f47441f8396db6f3e5feadca",
+    "packages/react-scripts/config/webpack.config.js": "4f3cf38b5cc448ef31d2becc2714dc1b3a1e8a4d",
+    "packages/react-scripts/config/webpackDevServer.config.js": "e4ded23093c6eb885160d82efaa02223863a61db",
     "packages/react-scripts/lib/react-app.d.ts": "780c321229cca2c815c7e210ac316c6950dd4f72",
-    "packages/react-scripts/package.json": "9cb006241ac30f7d86332ada0630ef148d2fe0cf",
+    "packages/react-scripts/package.json": "cb4f85bf9638b1bda6dff4824c42a79f38d68fbc",
     "packages/react-scripts/react-scripts.build.log": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
     "packages/react-scripts/scripts/build.js": "111ae573415cfb02fd9ab1cf0d28303713464e10",
     "packages/react-scripts/scripts/lint-staged.js": "cb3784dba811e67ac2c4b36415dcf91766225dfa",
@@ -24,8 +25,9 @@
     "packages/react-scripts/scripts/test.js": "985e18f79472f9f0949a2a3758090d97d037794d",
     "packages/react-scripts/scripts/utils/createJestConfig.js": "964e1c13982a30cc9dec0bf844d6d1ea2b994c23",
     "packages/react-scripts/scripts/utils/index.js": "519a7006605d3296c0aa2600a873a715a0c7924f",
-    "packages/react-scripts/.rush/temp/package-deps_lint.json": "7abcc0c093edccd0f2903a394380a16038b8031d",
-    "packages/react-scripts/shared-tsconfig.json": "11be7a8bca1c06aa8fa87c145b4afd278a30a938"
+    "packages/react-scripts/shared-tsconfig.json": "11be7a8bca1c06aa8fa87c145b4afd278a30a938",
+    "packages/react-scripts/.rush/temp/package-deps_build.json": "cc289e20fde4ac417a55813292300d9d726e2ddc",
+    "packages/react-scripts/config/webpack/persistentCache/createEnvironmentHash.js": "6d6be382f934e7ad057eefb398fe2c1b89fa082e"
   },
   "arguments": ""
 }
