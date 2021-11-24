@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5e8a514e-76a0-4f3a-b442-a1d189a8f0ed/deploy-status)](https://app.netlify.com/sites/rush-monorepo-boilerplate/deploys)
 
-[rush-monorepo-boilerplate.netlify.app](rush-monorepo-boilerplate.netlify.app)
+[rush-monorepo-boilerplate.netlify.app](https://rush-monorepo-boilerplate.netlify.app)
 
 ### Rush monorepo boilerplate
 
