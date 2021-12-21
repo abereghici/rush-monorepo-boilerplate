@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/react-app",
+  "name": "@monorepo/react-second-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,7 @@
     "@types/testing-library__jest-dom": "~5.14.1"
   },
   "scripts": {
-    "start": "PORT=3000 react-scripts start",
+    "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test:watch": "react-scripts test --watchAll=false",
     "test": "react-scripts test --watchAll=false",

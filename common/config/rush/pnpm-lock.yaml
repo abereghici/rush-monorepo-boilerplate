@@ -9,6 +9,7 @@ specifiers:
   '@rush-temp/eslint-config': file:./projects/eslint-config.tgz
   '@rush-temp/react-app': file:./projects/react-app.tgz
   '@rush-temp/react-scripts': file:./projects/react-scripts.tgz
+  '@rush-temp/react-second-app': file:./projects/react-second-app.tgz
   '@svgr/webpack': ^5.5.0
   '@testing-library/jest-dom': ^5.14.1
   '@testing-library/react': ^11.2.7
@@ -17,6 +18,7 @@ specifiers:
   '@types/node': ^12.20.19
   '@types/react': ^17.0.18
   '@types/react-dom': ^17.0.9
+  '@types/testing-library__jest-dom': ~5.14.1
   babel-jest: ^27.1.0
   babel-loader: ^8.2.2
   babel-plugin-named-asset-import: ^0.3.7
@@ -91,6 +93,7 @@ dependencies:
   '@rush-temp/eslint-config': file:projects/eslint-config.tgz_@babel+core@7.15.8
   '@rush-temp/react-app': file:projects/react-app.tgz
   '@rush-temp/react-scripts': file:projects/react-scripts.tgz_55c8e7af2ef312d86d6ea1595b201548
+  '@rush-temp/react-second-app': file:projects/react-second-app.tgz
   '@svgr/webpack': 5.5.0
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 11.2.7
@@ -99,6 +102,7 @@ dependencies:
   '@types/node': 12.20.33
   '@types/react': 17.0.31
   '@types/react-dom': 17.0.10
+  '@types/testing-library__jest-dom': 5.14.1
   babel-jest: 27.3.1_@babel+core@7.15.8
   babel-loader: 8.2.3_c444cf13e6678c57cc8afd2aacdd011d
   babel-plugin-named-asset-import: 0.3.7_@babel+core@7.15.8
@@ -16579,4 +16583,28 @@ packages:
       - webpack-cli
       - webpack-hot-middleware
       - webpack-plugin-serve
+    dev: false
+
+  file:projects/react-second-app.tgz:
+    resolution:
+      {
+        integrity: sha512-MCrHabUe9kMT3GalVXdQvomI4/DpKCksGZCW51i6gH5+AzPJbugxr9NUKZPpsQTnAaRcgSLtd8D1/zig1cnP/Q==,
+        tarball: file:projects/react-second-app.tgz,
+      }
+    name: '@rush-temp/react-second-app'
+    version: 0.0.0
+    dependencies:
+      '@testing-library/jest-dom': 5.14.1
+      '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
+      '@testing-library/user-event': 12.8.3
+      '@types/jest': 26.0.24
+      '@types/react': 17.0.31
+      '@types/react-dom': 17.0.10
+      '@types/testing-library__jest-dom': 5.14.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      typescript: 4.4.4
+      web-vitals: 1.1.2
+    transitivePeerDependencies:
+      - '@testing-library/dom'
     dev: false

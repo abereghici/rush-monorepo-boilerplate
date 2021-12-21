@@ -171,9 +171,7 @@
       "commandKind": "global",
       "summary": "Used by the pre-commit Git hook. This command invokes Prettier to reformat staged changes.",
       "safeForSimultaneousRushProcesses": true,
-
       "autoinstallerName": "rush-prettier",
-
       // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged"
     },
@@ -222,9 +220,32 @@
       "safeForSimultaneousRushProcesses": true,
       "autoinstallerName": "rush-plop",
       "shellCommand": "plop create-package"
+    },
+    {
+      "name": "start",
+      "commandKind": "bulk",
+      "summary": "Starts all projects in the repo",
+      "description": "Iterates through each project in the repo and runs the 'start' script",
+      "enableParallelism": true,
+      "safeForSimultaneousRushProcesses": true,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": true
+    },
+    {
+      "name": "start:react-app",
+      "commandKind": "global",
+      "summary": "Start the react-app project",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "cd apps/react-app && rushx start"
+    },
+    {
+      "name": "start:react-second-app",
+      "commandKind": "global",
+      "summary": "Start the react-second-app project",
+      "safeForSimultaneousRushProcesses": true,
+      "shellCommand": "cd apps/react-second-app && rushx start"
     }
   ],
-
   /**
    * Custom "parameters" introduce new parameters for specified Rush command-line commands.
    * For example, you might define a "--production" parameter for the "rush build" command.

@@ -26,6 +26,11 @@
       "reviewCategory": "apps"
     },
     {
+      "packageName": "@monorepo/react-second-app",
+      "projectFolder": "apps/react-second-app",
+      "reviewCategory": "apps"
+    },
+    {
       "packageName": "@monorepo/react-scripts",
       "projectFolder": "packages/react-scripts",
       "reviewCategory": "tools"
